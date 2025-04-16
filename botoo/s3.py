@@ -53,37 +53,4 @@ def list_files_in_s3_path(s3_client: 'boto3.client', bucket_name: str, prefix: s
     
     return file_keys
 
-# Example usage:
-# s3_client = boto3.client('s3')
-# files = list_files_in_s3_path(s3_client, 'my-bucket')
-# print(files)
-
-
-# Example usage:
-# s3_client = boto3.client('s3')
-# files = list_files_in_s3_bucket(s3_client, 'my-bucket')
-# print(files)
-
-
-# Example usage:
-s3_client = boto3.client('s3')
-files = list_files_in_s3_path(s3_client, 'uk-fuel-price-data', "raw")
-print(files)
-
-
-
-# Example usage:
-s3_client = boto3.client('s3')
-upload_file_to_s3(s3_client, 'README.md', 'uk-fuel-price-data', 'raw/files.txt')
-
-
-# Create an S3 client
-s3 = boto3.client('s3')
-
-# Specify the bucket name and file key
-# bucket_name = "uk-fuel-price-data"
-# file_key = 'landing/fuel-prices-data.json'
-# text = get_data(s3, bucket_name, file_key)
-
-# print(text)
 
