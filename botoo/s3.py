@@ -54,3 +54,17 @@ def list_files_in_s3_path(s3_client: 'boto3.client', bucket_name: str, prefix: s
     return file_keys
 
 
+
+def upload_string_to_s3(s3_client, bucket_name, file_key, file_content):
+    """Uploads a string to an S3 bucket.
+
+    Args:
+        s3_client (boto3.client): The S3 client used to interact with the S3 service.
+        bucket_name (str): The name of the S3 bucket.
+        file_key (str): The key (path) where the file will be stored in the S3 bucket.
+        file_content (str): The content of the file as a string.
+
+    Returns:
+        None
+    """
+    s3_client.put_object(Bucket=bucket_name, Key=file_key, Body=file_content)
