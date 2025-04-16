@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "botoo"
+version = "0.1.0"
+description = "A Python package that assists you use boto3."
+authors = [
+    { name="botoo" }
+]
+dependencies = [
+    "boto3"
+]
+readme = "README.md"
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
